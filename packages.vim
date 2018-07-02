@@ -1,44 +1,67 @@
+" Packages
+
+
+" Package Management Commands {{{
+
 command! PackUpdate packadd minpac | source $MYVIMRC | redraw | call minpac#update()
 command! PackClean packadd minpac | source $MYVIMRC | call minpac#clean()
 
-packadd minpac
-call minpac#init()
+" }}}
 
-" minpac - so it can update itself
-call minpac#add('k-takata/minpac', {'type': 'opt'})
+" Packages {{{
 
-" general
-call minpac#add('neomake/neomake')
-call minpac#add('shougo/denite.nvim')
-call minpac#add('shougo/deoplete.nvim')
-call minpac#add('tpope/vim-abolish')
-call minpac#add('tpope/vim-commentary')
-call minpac#add('tpope/vim-dadbod')
-call minpac#add('tpope/vim-eunuch')
-call minpac#add('tpope/vim-fugitive')
-call minpac#add('tpope/vim-markdown')
-call minpac#add('tpope/vim-repeat')
-call minpac#add('tpope/vim-surround')
-call minpac#add('tpope/vim-unimpaired')
+if exists('*minpac#init')
+  " minpac is loaded
+  call minpac#init()
 
-" python
-call minpac#add('zchee/deoplete-jedi')
+  " minpac - so it can update itself
+  call minpac#add('k-takata/minpac', {'type': 'opt'})
 
-" java
-call minpac#add('artur-shaik/vim-javacomplete2')
+  " general
+  call minpac#add('neomake/neomake')
+  call minpac#add('shougo/denite.nvim')
+  call minpac#add('shougo/deoplete.nvim')
+  call minpac#add('tpope/vim-abolish')
+  call minpac#add('tpope/vim-commentary')
+  call minpac#add('tpope/vim-dadbod')
+  call minpac#add('tpope/vim-eunuch')
+  call minpac#add('tpope/vim-fugitive')
+  call minpac#add('tpope/vim-markdown')
+  call minpac#add('tpope/vim-repeat')
+  call minpac#add('tpope/vim-surround')
+  call minpac#add('tpope/vim-unimpaired')
 
-" markdown
-call minpac#add('joker1007/vim-markdown-quote-syntax')
+  " python
+  call minpac#add('zchee/deoplete-jedi')
 
-" json
-call minpac#add('elzr/vim-json')
-call minpac#add('quramy/vison')
+  " java
+  call minpac#add('artur-shaik/vim-javacomplete2')
 
-" freemarker
-call minpac#add('andreshazard/vim-freemarker')
+  " markdown
+  call minpac#add('joker1007/vim-markdown-quote-syntax')
 
-" rst
-call minpac#add('gu-fan/riv.vim')
+  " javascript
+  call minpac#add('othree/yajs.vim')
+  call minpac#add('othree/es.next.syntax.vim')
 
-" golang
-call minpac#add('fatih/vim-go')
+
+  " json
+  call minpac#add('elzr/vim-json')
+  call minpac#add('quramy/vison')
+
+  " freemarker
+  call minpac#add('andreshazard/vim-freemarker')
+
+  " rst
+  call minpac#add('gu-fan/riv.vim')
+
+  " golang
+  call minpac#add('fatih/vim-go')
+
+endif
+
+" }}}
+
+" Footer {{{
+" vim: fdm=marker ts=2 sts=2 sw=2 et ai si
+" }}}
