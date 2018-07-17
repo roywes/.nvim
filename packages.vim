@@ -30,6 +30,7 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-repeat')
   call minpac#add('tpope/vim-surround')
   call minpac#add('tpope/vim-unimpaired')
+  call minpac#add('itchyny/lightline.vim')
 
   " python
   call minpac#add('zchee/deoplete-jedi')
@@ -57,6 +58,11 @@ if exists('*minpac#init')
 
   " golang
   call minpac#add('fatih/vim-go')
+
+  " toml
+  call minpac#add('cespare/vim-toml')
+  call minpac#add('maralla/vim-toml-enhance')
+
 
 endif
 

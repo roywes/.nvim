@@ -116,6 +116,7 @@ set softtabstop=4
 set shiftwidth=4
 set autoindent
 set smartindent
+set noshowmode
 
 set completeopt-=preview
 set pastetoggle=<F7>
@@ -155,6 +156,16 @@ let g:deoplete#enable_at_startup = 1
 
 " Neomake: mvn - use package instead of install
 let g:neomake_mvn_args=['compile']
+
+" Lightline: show git branch
+let g:lightline = {
+\ 'active': {
+\   'left': [ [ 'mode', 'paste' ],[ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+\ },
+\ 'component_function': {
+\   'gitbranch': 'fugitive#head'
+\ },
+\}
 
 " }}}
 
