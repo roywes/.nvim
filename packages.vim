@@ -34,14 +34,18 @@ if exists('*minpac#init')
 
   " python
   call minpac#add('zchee/deoplete-jedi')
+  call minpac#add('vim-python/python-syntax')
+  call minpac#add('tmhedberg/SimpylFold')
+  call minpac#add('mitsuhiko/vim-jinja')
 
   " java
-  call minpac#add('artur-shaik/vim-javacomplete2')
+  " call minpac#add('artur-shaik/vim-javacomplete2')
 
   " markdown
   call minpac#add('joker1007/vim-markdown-quote-syntax')
 
-  " javascript
+  " web
+  call minpac#add('othree/html5.vim')
   call minpac#add('othree/yajs.vim')
   call minpac#add('othree/es.next.syntax.vim')
 

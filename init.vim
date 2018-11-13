@@ -134,10 +134,19 @@ augroup END
 
 " Plugin Configuration {{{
 
-" Neovim: Use system python as provider. Allows adding venvs to path
-let g:python3_host_prog = '/usr/bin/python3'
+" Python: {{{
 
-" Neovim: Disable Python 2 support
+" Enable all highlighting
+let g:python_highlight_all = 1
+
+" Use system python as provider. Allows adding venvs to path
+let g:python3_host_prog = '/usr/bin/python'
+
+" }}}
+
+" Neovim: {{{
+
+" Python: Disable Python 2 support
  let g:loaded_python_provider = 1
 
 " Netrw: Use tree view by default
@@ -145,6 +154,10 @@ let g:netrw_liststyle = 3
 
 " Netrw: Remove the banner for more minimalist view
 let g:netrw_banner = 0
+
+" }}}
+
+" Deoplete: {{{
 
 " Deoplete: enable
 let g:deoplete#enable_at_startup = 1
@@ -154,10 +167,18 @@ let g:deoplete#enable_at_startup = 1
   \ },
 \}
 
-" Neomake: mvn - use package instead of install
+" }}}
+
+" Neomake: {{{
+
+" mvn - use package instead of install
 let g:neomake_mvn_args=['compile']
 
-" Lightline: show git branch
+" }}}
+
+" Lightline: {{{
+
+" show git branch
 let g:lightline = {
 \ 'active': {
 \   'left': [ [ 'mode', 'paste' ],[ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -169,10 +190,12 @@ let g:lightline = {
 
 " }}}
 
+" }}}
+
 " Filetype settings {{{
 autocmd FileType rst setlocal spell
 " }}}
 
 " Footer {{{
 " vim: fdm=marker ts=4 sts=4 sw=4 et ai si
-" }}}
+"}}}
